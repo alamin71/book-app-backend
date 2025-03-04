@@ -6,12 +6,16 @@ const {
   getOrderByEmail,
   getAllOrders,
   DeleteAOrder,
+  getOrderByID,
 } = require("./order.controller");
 
 const router = express.Router();
 
 // create order endpoint
 router.post("/", createAOrder);
+
+// get single order by id
+router.get("/:id", getOrderByID);
 
 // get all orders endpoint
 router.get("/", getAllOrders);
