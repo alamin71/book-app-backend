@@ -5,6 +5,7 @@ const {
 
   getOrderByEmail,
   getAllOrders,
+  DeleteAOrder,
 } = require("./order.controller");
 
 const router = express.Router();
@@ -17,5 +18,7 @@ router.get("/", getAllOrders);
 
 // get orders by user email
 router.get("/email/:email", getOrderByEmail);
+//delete order
+router.delete("/:id", DeleteAOrder);
 
 module.exports = router;
